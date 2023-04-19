@@ -2,15 +2,24 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Testimonials from "../components/Testimonials.astro";
 import IndexButton from "../components/IndexButton.astro";
+import SomeButton from "../components/SomeButton.astro";
 ---
 
 
 <MainLayout title="">
 	<h1>LØS DE KONGELIGE MYSTERIER</h1>
 	<IndexButton />
+	<SomeButton />
 	<Testimonials />
   </MainLayout>
 
 
 
-  
+<style>
+	h1 {
+		position: relative;
+		top:100px;
+	}
+
+	
+</style>

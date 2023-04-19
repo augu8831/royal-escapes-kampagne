@@ -1,0 +1,32 @@
+---
+const { variant, size, linkTo, text } = Astro.props;
+---
+
+
+<a href={linkTo} class={variant + " " + size}>{text}</a>
+
+<style>
+  .menu {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .menu:hover {
+    background-color: transparent;
+    color: white;
+  }
+
+
+  .large {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 100px;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+</style>

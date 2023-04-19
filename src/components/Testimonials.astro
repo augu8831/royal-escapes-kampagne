@@ -1,0 +1,21 @@
+<!-- ---
+const url = "";
+const api = "";
+const options = {
+  method: "GET",
+  headers: {
+    apikey: api,
+  },
+};
+
+const data = await fetch(url, options).then((res) => res.json());
+console.log(data);
+
+import Testimonial from "../components/Testimonial.astro";
+---
+
+{
+  data.map((testimonial) => {
+    return <Testimonial data={testimonial} />;
+  })
+} -->

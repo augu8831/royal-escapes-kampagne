@@ -1,0 +1,34 @@
+---
+import SomeButton from "../components/SomeButton.astro";
+---
+
+
+
+
+<footer>
+<div>
+    hej
+</div>
+<div>
+    <p>Copyright Royal Escapes 2021© All Rights Reserved</p>
+</div>
+<div>
+    <ul>
+      <li>
+        <SomeButton variant="footer" size="medium" linkTo="/index.html" text="Knap" />
+      </li>
+      <li>
+        <SomeButton variant="footer" size="medium" linkTo="/about" text="Knap" />
+      </li>
+    </ul>
+</div>
+</footer>
+
+<style>
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+</style>

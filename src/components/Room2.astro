@@ -1,4 +1,7 @@
 <section class="room">
+  <div class="arrow">
+    <img src="src/img/logos/pil-3@2x.png" alt="Royal Escapes logo" />
+  </div>
   <img src="src/img/fotos/royal-escapes-3.jpeg" alt="" />
   <div class="logobtn">
     <img src="src/img/logos/the_royal_dungeon_hvid@3x.png" alt="" />
@@ -11,7 +14,7 @@
       section {
         display: flex;
         flex-direction: row;
-        padding: 2rem;
+        /* padding: 2rem; */
       }
       img {
         height: auto;
@@ -30,6 +33,8 @@
 
       .room {
         position: relative;
+        /* top: 1500px;
+        right: 100px; */
       }
 
       .logobtn {
@@ -56,6 +61,16 @@
         font-weight: 200;
         font-style: normal;
         color: white;
+      }
+
+      .arrow {
+        position: absolute;
+        right: 0;
+        top: 300px;
+      }
+      .arrow img {
+        width: 110px;
+        height: auto;
       }
     }
   </style>

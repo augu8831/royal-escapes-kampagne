@@ -1,0 +1,25 @@
+---
+export async function getStaticPaths() {
+  const data = await fetch("https://inoovrqyocblpfjinodr.supabase.co/rest/v1/Testimonials", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlub292cnF5b2NibHBmamlub2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5Nzg0NzMsImV4cCI6MTk5NzU1NDQ3M30.8uiWz0Xo5WmwKbR6oLD1hSTTd-3PII1pFZlaZ9NEza4",
+    },
+  }).then((res) => res.json());
+
+  return data.map((singleTestimonial) => {
+    return {
+      params: { id: singleTestimonial.id },
+      props: { singleTestimonial },
+    };
+  });
+}
+
+const { singleTestimonial } = Astro.props;
+
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title={singleTestimonial.Title}>
+  {singleTestimonial.Description}
+</MainLayout>

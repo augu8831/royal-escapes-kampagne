@@ -4,24 +4,24 @@ import Testimonials from "../components/Testimonials.astro";
 import IndexButton from "../components/IndexButton.astro";
 import SomeButton from "../components/SomeButton.astro";
 import Square from "../components/Square.astro";
-import Room1 from "../components/Room1.astro";
-import Room2 from "../components/Room2.astro";
-import Room3 from "../components/Room3.astro";
+// import Room1 from "../components/Room1.astro";
+// import Room2 from "../components/Room2.astro";
+// import Room3 from "../components/Room3.astro";
+import Rooms from "../components/Rooms.astro";
 import TikTokArrow from "../components/TikTokArrow.astro";
 ---
 
 <MainLayout title="">
-  <article>
-    <h1>LØS DE KONGELIGE MYSTERIER</h1>
-    <IndexButton />
-    <div class="indexbottom">
-      <Square />
-      <SomeButton />
-    </div>
-  </article>
-  <Room1 />
+  <h1>LØS DE KONGELIGE MYSTERIER</h1>
+  <IndexButton />
+  <div class="indexbottom">
+    <Square />
+    <SomeButton />
+  </div>
+  <!-- <Room1 />
   <Room2 />
-  <Room3 />
+  <Room3 /> -->
+  <Rooms />
   <Testimonials />
   <TikTokArrow />
 </MainLayout>
@@ -33,10 +33,10 @@ import TikTokArrow from "../components/TikTokArrow.astro";
     margin-bottom: 17rem;
   }
 
-  article {
+  /* article {
     background-image: url(src/img/fotos/royal-escapes-2.jpeg);
     background-size: cover;
-  }
+  } */
 
   .indexbottom {
     padding: 2rem;

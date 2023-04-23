@@ -1,0 +1,160 @@
+---
+---
+
+<article>
+  <h2>Kontakt Royal Escapes</h2>
+  <section>
+    <div>
+      <form>
+        <label for="Navn"></label>
+        <input type="text" id="Navn" name="Navn" placeholder="Navn" />
+
+        <label for="Email"></label>
+        <input type="text" id="Email" name="Email" placeholder="Email" />
+
+        <label for="Telefon"></label>
+        <input type="text" id="Telefon" name="Telefon" placeholder="Telefon" />
+
+        <label for="Besked"></label>
+        <textarea id="Besked" name="Besked" placeholder="Besked..." style="height: 200px"></textarea>
+
+        <input type="submit" value="Send" />
+      </form>
+    </div>
+    <div>
+      <p>
+        Hvis du gerne vil booke et escape room, kan du ikke gøre det herfra. Brug istedet denne side for at finde det rette passende rum og book der igennem. Har du spørgsmål, ris eller ros, kan du kontakte os på vores formular eller skrive til os på
+        nedenstående mail.
+      </p>
+      <p>Haster det, eller har du brug for en booking nu og her, kan du også ringe eller skrive en sms til vores telefon.</p>
+      <p><br /></p>
+      <p>Mail: info@royalescapes.dk</p>
+      <p>Telefon: 60 89 66 20</p>
+      <p>Royal Escapes, Frederiksborggade 30, 1310 København K</p>
+    </div>
+  </section>
+</article>
+
+<script>
+  const url = "https://inoovrqyocblpfjinodr.supabase.co/rest/v1/Testimonials";
+  const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlub292cnF5b2NibHBmamlub2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5Nzg0NzMsImV4cCI6MTk5NzU1NDQ3M30.8uiWz0Xo5WmwKbR6oLD1hSTTd-3PII1pFZlaZ9NEza4";
+
+  function addTestimonial(newTestimonial) {
+    //dette er funktionen der putter data i tabbellen i databasen
+
+    const options = {
+      method: "POST", //post gør at den putter noget i tabellen istedet for at hente
+      headers: {
+        apikey: api,
+        Authorization: "Bearer " + api,
+        "Content-Type": "application/json",
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify(newTestimonial), //laver variablen newTestimonial til json (her er det et objekt med 2 værdier)
+    };
+
+    console.log("options:", options);
+
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data:", data);
+        //når dden er færdig med at putte i databasen går den til filen addTestimonialfeedback "/" er for at sikre at den leder i roden
+        window.location.href = "/addTestimonialFeedback";
+      });
+  }
+
+  const form = document.querySelector("form");
+  console.log("form.elements", form.elements);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const obj = {
+      Navn: form.elements.Navn.value,
+      Email: form.elements.Email.value,
+      Telefon: form.elements.Telefon.value,
+      Besked: form.elements.Besked.value,
+    };
+
+    addTestimonial(obj);
+  });
+</script>
+
+<style>
+  article {
+    padding: 5rem;
+  }
+  ul {
+    list-style-type: none;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 17px;
+    color: white;
+  }
+  form {
+    color: #9a9a9a;
+    text-decoration: none;
+    margin-top: 2rem;
+  }
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid white;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: #9a9a9a;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  textarea[type="text"] {
+    width: 100%;
+    background-color: transparent;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ffffff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    color: #9a9a9a;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  input[type="submit"] {
+    border: 1px solid white;
+    background-color: transparent;
+    padding: 12px 20px;
+    cursor: pointer;
+    color: #9a9a9a;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+</style>
+
+<!-- <form>
+      <label for="title">Title:</label>
+      <input id="title" name="title" type="text" required />
+    
+      <label for="long">Long Description:</label>
+      <textarea id="long" name="long" rows="6" required></textarea>
+    
+      <button type="submit">Submit</button>
+    </form> -->

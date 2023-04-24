@@ -20,6 +20,9 @@ const { singleTestimonial } = Astro.props;
 import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<MainLayout title={singleTestimonial.Title}>
-  {singleTestimonial.Description}
+<MainLayout>
+  {singleTestimonial.Navn}
+  {singleTestimonial.Email}
+  {singleTestimonial.Telefon}
+  {singleTestimonial.Besked}
 </MainLayout>

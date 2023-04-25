@@ -1,6 +1,6 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
 import Testimonials from "../components/Testimonials.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import IndexButton from "../components/IndexButton.astro";
 import SomeButton from "../components/SomeButton.astro";
 import Square from "../components/Square.astro";
@@ -10,40 +10,18 @@ import Square from "../components/Square.astro";
 import Rooms from "../components/Rooms.astro";
 import TikTokArrow from "../components/TikTokArrow.astro";
 import InstagramArrow from "../components/InstagramArrow.astro";
+import AddTestimonial from "./addTestimonial.astro";
 ---
 
-<MainLayout title="">
-  <h1>LØS DE KONGELIGE MYSTERIER</h1>
-  <IndexButton />
-  <div class="indexbottom">
-    <Square />
-    <SomeButton />
-  </div>
-  <!-- <Room1 />
-  <Room2 />
-  <Room3 /> -->
-  <Rooms />
-  <Testimonials />
-  <TikTokArrow />
-  <InstagramArrow />
-</MainLayout>
-
-<style>
-  h1 {
-    position: relative;
-    top: 100px;
-    margin-bottom: 10rem;
-    margin-left: 5rem;
-  }
-
-  /* article {
-    background-image: url(src/img/fotos/royal-escapes-2.jpeg);
-    background-size: cover;
-  } */
-
-  .indexbottom {
-    padding: 2rem;
-    display: flex;
-    justify-content: space-between;
-  }
-</style>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <h1>LØS DE KONGELIGE MYSTERIER</h1>
+  </body>
+</html>

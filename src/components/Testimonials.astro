@@ -20,18 +20,19 @@ import Testimonial from "../components/Testimonial.astro";
   })
 } -->
 <section>
-  <div class="container">
+  <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus porro in molestiae maxime libero commodi quo animi iure optio magni quam fugiat harum facere enim, nobis provident ex excepturi.</p> -->
+  <div class="arrow">
     <h2>Det siger vores gæster</h2>
-    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus porro in molestiae maxime libero commodi quo animi iure optio magni quam fugiat harum facere enim, nobis provident ex excepturi.</p> -->
-    <div class="arrow">
-      <img src="src/img/logos/pil-2@2x.png" alt="Royal Escapes logo" />
-    </div>
+    <img src="src/img/logos/pil-2@2x.png" alt="Royal Escapes logo" />
+    <!-- <div class="container"></div> -->
   </div>
 </section>
 
 <style>
   section {
-    padding: 15rem;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
   }
   .container {
     position: relative;
@@ -40,19 +41,17 @@ import Testimonial from "../components/Testimonial.astro";
     background-color: #252525;
   }
   .arrow img {
-    position: absolute;
-    top: -60px;
-    left: -30px;
+    position: relative;
   }
   img {
     width: 1000px;
     height: auto;
   }
 
-  .container h2 {
-    position: absolute;
-    top: -140px;
-    left: -80px;
+  .section h2 {
+    position: relative;
+    /* top: -140px;
+    left: -80px; */
   }
 
   .container p {

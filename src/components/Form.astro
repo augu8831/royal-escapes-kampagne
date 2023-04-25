@@ -1,6 +1,7 @@
 ---
 ---
 
+<!-- */ addTestimonial */ -->
 <article>
   <h2>Kontakt Royal Escapes</h2>
   <section>
@@ -35,6 +36,51 @@
   </section>
 </article>
 
+<script>
+  const url = "https://inoovrqyocblpfjinodr.supabase.co/rest/v1/Testimonials";
+  const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlub292cnF5b2NibHBmamlub2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5Nzg0NzMsImV4cCI6MTk5NzU1NDQ3M30.8uiWz0Xo5WmwKbR6oLD1hSTTd-3PII1pFZlaZ9NEza4";
+
+  function addTestimonial(newTestimonial) {
+    //dette er funktionen der putter data i tabbellen i databasen
+
+    const options = {
+      method: "POST", //post gør at den putter noget i tabellen istedet for at hente
+      headers: {
+        apikey: api,
+        Authorization: "Bearer " + api,
+        "Content-Type": "application/json",
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify(newTestimonial), //laver variablen newTestimonial til json (her er det et objekt med 2 værdier)
+    };
+
+    console.log("options:", options);
+
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data:", data);
+        //når dden er færdig med at putte i databasen går den til filen addTestimonialfeedback "/" er for at sikre at den leder i roden
+        window.location.href = "/addTestimonialFeedback";
+      });
+  }
+
+  const form = document.querySelector("form");
+  console.log("form.elements", form.elements);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const obj = {
+      Navn: form.elements.Navn.value,
+      Email: form.elements.Email.value,
+      Telefon: form.elements.Telefon.value,
+      Besked: form.elements.Besked.value,
+    };
+
+    addTestimonial(obj);
+  });
+</script>
 <style>
   article {
     padding: 5rem;

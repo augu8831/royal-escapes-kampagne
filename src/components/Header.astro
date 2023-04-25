@@ -1,0 +1,139 @@
+---
+import LangButton from "../components/LangButton.astro";
+---
+
+<header>
+  <nav>
+    <div class="buttons">
+      <ul class="ul">
+        <li>
+          <LangButton variant="menu" size="large" linkTo="/index.html" text="DK" />
+        </li>
+        <li>
+          <LangButton variant="menu" size="large" linkTo="/index.html" text="EN" />
+        </li>
+      </ul>
+    </div>
+
+    <div class="logobrand">
+      <img src="src/img/logos/logo_hvid@3x.png" alt="Royal Escapes logo" />
+    </div>
+
+    <div class="minnav">
+      <ul>
+        <li>
+          <a href="/index">Forside</a>
+        </li>
+        <li>
+          <a href="/contact">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 0.5rem;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+  .logobrand {
+    display: inline-block;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    margin: 0.5rem;
+  }
+
+  .logobrand img {
+    width: 100px;
+    height: auto;
+  }
+
+  .minnav ul {
+    gap: 10px;
+    list-style: none;
+  }
+
+  .minnav a {
+    text-decoration: none;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    color: white;
+  }
+
+  .button ul {
+    gap: 10px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ul li {
+    list-style-type: none;
+  }
+
+  @media (min-width: 800px) {
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .logobrand {
+      display: inline-block;
+      font-size: 1.25rem;
+      line-height: inherit;
+      white-space: nowrap;
+      margin: 0.5rem;
+    }
+
+    .logobrand img {
+      width: 150px;
+      height: auto;
+    }
+
+    .minnav ul {
+      list-style-type: none;
+      display: contents;
+      display: flex;
+      gap: 10px;
+    }
+
+    .button ul {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      list-style: none;
+    }
+
+    header {
+      padding: 0.5rem;
+    }
+
+    .ul {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .ul li {
+      list-style-type: none;
+    }
+  }
+</style>

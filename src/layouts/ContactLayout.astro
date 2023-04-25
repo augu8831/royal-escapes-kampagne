@@ -15,9 +15,11 @@ import "../styles/style.css";
     <title>{title}</title>
   </head>
   <body>
-    <Header />
-    <h1>{title}</h1>
-    <slot />
+    <section>
+      <Header />
+      <h1>{title}</h1>
+      <slot />
+    </section>
     <Footer />
   </body>
 </html>
@@ -27,5 +29,10 @@ import "../styles/style.css";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  section {
+    background-image: url(src/img/fotos/royal-escapes-2.jpeg);
+    background-size: cover;
   }
 </style>

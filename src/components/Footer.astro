@@ -1,0 +1,33 @@
+---
+import SomeButton from "../components/SomeButton.astro";
+---
+
+<footer>
+  <img src="src/img/fotos/kort.png" alt="#" />
+  <section>
+    <div>hej</div>
+    <div>
+      <p>Copyright Royal Escapes 2021© All Rights Reserved</p>
+    </div>
+    <div>
+      <SomeButton />
+    </div>
+  </section>
+</footer>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 8rem;
+    margin: 2rem;
+  }
+
+  img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(80%);
+  }
+</style>

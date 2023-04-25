@@ -78,6 +78,16 @@ import LangButton from "../components/LangButton.astro";
     flex-direction: row;
   }
 
+  .ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ul li {
+    list-style-type: none;
+  }
+
   @media (min-width: 800px) {
     nav {
       display: flex;
@@ -114,6 +124,16 @@ import LangButton from "../components/LangButton.astro";
 
     header {
       padding: 0.5rem;
+    }
+
+    .ul {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+    }
+
+    .ul li {
+      list-style-type: none;
     }
   }
 </style>

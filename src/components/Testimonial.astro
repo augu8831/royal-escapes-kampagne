@@ -1,0 +1,15 @@
+---
+const { data } = Astro.props;
+
+/* Funktion der gør den kun viser 20 tegn i det man sender ind*/
+function getFirstNchars(str, length) {
+  return str.substring(0, length);
+}
+---
+
+<article>
+  <p>{data.Navn}</p>
+  <p>{data.Email}</p>
+  <p>{data.Telefon}</p>
+  <p>{getFirstNchars(data.Besked, 20)}... <a href={"testimonials/" + data.id}>læs mere</a></p>
+</article>

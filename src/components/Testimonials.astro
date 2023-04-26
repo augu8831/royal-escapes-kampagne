@@ -11,18 +11,19 @@ console.log(data);
 import Testimonial from "./Testimonial.astro";
 ---
 
-{
-  data.map((testimonial) => {
-    return <Testimonial data={testimonial} />;
-  })
-}
-
 <section>
   <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus porro in molestiae maxime libero commodi quo animi iure optio magni quam fugiat harum facere enim, nobis provident ex excepturi.</p> -->
   <div class="arrow">
     <h2>Det siger vores gæster</h2>
     <img src="src/img/logos/pil-2@2x.png" alt="Royal Escapes logo" />
     <!-- <div class="container"></div> -->
+    <div class="testimonial">
+      {
+        data.map((testimonial) => {
+          return <Testimonial data={testimonial} />;
+        })
+      }
+    </div>
   </div>
 </section>
 
@@ -32,6 +33,14 @@ import Testimonial from "./Testimonial.astro";
     justify-content: center;
     padding: 2rem;
   }
+
+  .testimonial {
+    position: absolute;
+    top: 166.5rem;
+    width: 1000px;
+    height: 289px:
+  } 
+
   .container {
     position: relative;
     height: 300px;
@@ -44,6 +53,7 @@ import Testimonial from "./Testimonial.astro";
   img {
     width: 1000px;
     height: auto;
+    position: relative;
   }
 
   .section h2 {

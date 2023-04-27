@@ -1,5 +1,5 @@
 <section class="rooms">
-  <div class="room1">
+  <div class="room1 right hiddenleft">
     <img class="roomsimg1" src="src/img/fotos/room1.png" alt="" />
     <div class="logobtn grid1">
       <!-- <img class="logo" src="src/img/logos/the_royal_cabinet_hvid@3x.png" alt="" /> -->
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <div class="room2">
+  <div class="room2 left hiddenright">
     <img class="roomsimg2" src="src/img/fotos/room2.png" alt="" />
     <div class="logobtn grid2">
       <!-- <img class="logo" src="src/img/logos/the_royal_dungeon_hvid@3x.png" alt="" />
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="room3">
+  <div class="room3 right hiddenleft">
     <img class="roomsimg3" src="src/img/fotos/room3.png" alt="" />
     <div class="logobtn grid3">
       <!-- <img class="logo" src="src/img/logos/the_royal_playroom_hvid@3x.png" alt="" />
@@ -190,4 +190,62 @@
     width: 500px;
     height: auto;
   }
+
+  .right {
+  line-height: 2rem;
+}
+
+.left {
+  line-height: 2rem;
+}
+
+.hiddenleft {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+
+.hiddenright {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
 </style>
+
+<script>
+  const observerLeft = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+    // } else {
+    //   entry.target.classList.remove("show");
+    // }
+  });
+});
+
+const observerRight = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+    // } else {
+    //   entry.target.classList.remove("show");
+    // }
+  });
+});
+
+const hiddenElementLeft = document.querySelectorAll(".hiddenleft");
+hiddenElementLeft.forEach((el) => observerLeft.observe(el));
+const hiddenElementRight = document.querySelectorAll(".hiddenright");
+hiddenElementRight.forEach((el) => observerRight.observe(el));
+
+
+  </script>

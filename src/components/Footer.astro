@@ -3,7 +3,16 @@ import SomeButton from "../components/SomeButton.astro";
 ---
 
 <footer>
-  <img src="src/img/fotos/kort.png" alt="#" />
+  <div class="google-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.165251285601!2d12.58762741592797!3d55.68611468053554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253f02220d4b9%3A0xe64c6b91367cf407!2sRoyal%20Escapes!5e0!3m2!1sda!2sdk!4v1682620862950!5m2!1sda!2sdk"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
   <section>
     <div>hej</div>
     <div>
@@ -32,5 +41,14 @@ import SomeButton from "../components/SomeButton.astro";
   }
   .SoMeButton {
     margin-top: 10.7rem; /* PLacering på siden */
+  }
+
+  .google-map iframe {
+    height: 400px;
+    width: 100%;
+    /* left: 0;
+    top: 0; */
+    filter: grayscale(80%);
+    /* position: absolute; */
   }
 </style>

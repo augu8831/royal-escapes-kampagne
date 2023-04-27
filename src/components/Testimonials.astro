@@ -16,6 +16,7 @@ import Testimonial from "./Testimonial.astro";
   <div class="arrow">
     <h2>Det siger vores gæster</h2>
     <img src="src/img/logos/pil-2@2x.png" alt="Royal Escapes logo" />
+    <img class="ratings" src="src/img/fotos/ratings@4x.png" alt="Royal Escapes logo" />
     <!-- <div class="container"></div> -->
     <div class="testimonial">
       {
@@ -28,10 +29,19 @@ import Testimonial from "./Testimonial.astro";
 </section>
 
 <style>
+
   section {
     display: flex;
     justify-content: center;
     padding: 2rem;
+  }
+
+  .ratings {
+    position: absolute;
+    top:-45px;
+    left: -276px;
+    width: 200px;
+    height: auto;
   }
 
   .testimonial {

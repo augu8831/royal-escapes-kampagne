@@ -15,6 +15,9 @@ import "../styles/style.css";
     <title>{title}</title>
   </head>
   <body>
+    <div class="video-wrapper">
+      <iframe playsinline autoplay muted loop poster="#"> <source src="https://www.youtube.com/watch?v=aLwI-umNL1s" type="video/webm"></iframe>
+    </div>
     <Header />
     <h1>{title}</h1>
     <slot />
@@ -27,5 +30,35 @@ import "../styles/style.css";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+  iframe {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .video-wrapper {
+    border: 2px solid #000;
+    width: 700px;
+    height: 500px;
+    position: ;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Telling our absolute positioned video to 
+  be relative to this element */
+
+    /* Will not allow the video to overflow the 
+  container */
+
+    /* Centering the container's content vertically 
+  and horizontally */
   }
 </style>

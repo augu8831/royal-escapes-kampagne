@@ -52,12 +52,12 @@ import LangButton from "../components/LangButton.astro";
     width: 37px;
   }
 
-  /* .mobil-menu {
-    display: none;
-  } */
+  .mobil-menu {
+    display: block;
+  }
 
   .menu-v {
-    display: block;
+    display: none;
   }
 
   .mobil-menu li {
@@ -68,6 +68,13 @@ import LangButton from "../components/LangButton.astro";
     text-decoration: none;
     color: #fefefe;
     gap: 0.2rem;
+  }
+
+  .burgermenu img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
   }
   header {
     padding: 0.5rem;
@@ -125,7 +132,7 @@ import LangButton from "../components/LangButton.astro";
   .ul li {
     list-style-type: none;
   }
-
+  /* 
   @media (min-width: 800px) {
     .burgermenu-container {
       display: block;
@@ -195,7 +202,7 @@ import LangButton from "../components/LangButton.astro";
     .ul li {
       list-style-type: none;
     }
-  }
+  } */
 </style>
 
 <script>

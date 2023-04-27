@@ -52,9 +52,9 @@ import LangButton from "../components/LangButton.astro";
     width: 37px;
   }
 
-  .mobil-menu {
+  /* .mobil-menu {
     display: none;
-  }
+  } */
 
   .menu-v {
     display: block;
@@ -127,6 +127,28 @@ import LangButton from "../components/LangButton.astro";
   }
 
   @media (min-width: 800px) {
+    .burgermenu-container {
+      display: block;
+    }
+
+    .burgermenu {
+      margin-top: 20px;
+      width: 37px;
+    }
+
+    .menu-v {
+      display: block;
+    }
+
+    .mobil-menu li {
+      transition: none;
+    }
+
+    .mobil-menu a {
+      text-decoration: none;
+      color: #fefefe;
+      gap: 0.2rem;
+    }
     nav {
       display: flex;
       flex-direction: row;

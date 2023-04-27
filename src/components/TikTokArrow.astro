@@ -1,22 +1,26 @@
 <section>
   <!-- <div class="container"> -->
   <div class="arrow">
-    <h2>Oplevelser hos Royal Escapes</h2>
+    <div class="h2">
+      <h2>Oplevelser hos Royal Escapes</h2>
+    </div>
     <img src="src/img/logos/tiktok_arrow@2x.png" alt="Royal Escapes logo" />
   </div>
-  <!-- </div> -->
+  <div class="tiktok">
+    <video controls>
+      <source src="src/img/video/tiktok-kopi.mp4" type="video/mp4" />
+    </video>
+  </div>
 </section>
-<section class="tiktok">
-  <video controls>
-    <source src="src/img/video/tiktok-kopi.mp4" type="video/mp4" />
-  </video>
-</section>
+<!-- </div> -->
 
 <style>
   section {
     display: flex;
     justify-content: center;
+    margin-top: 15rem;
     padding: 2rem;
+    margin-bottom: 17rem;
   }
   /* .container {
     position: relative;
@@ -34,14 +38,20 @@
     height: auto;
   }
 
-  .arrow h2 {
+  .h2 h2 {
     position: absolute;
     right: 300px;
+    bottom: -10rem;
   }
 
-  .tiktok {
+  video {
+    width: auto;
+    height: 700px;
+  }
+
+  .tiktok video {
     position: absolute;
-    right: 31rem;
-    bottom: -200rem;
+    right: 30rem;
+    bottom: -222rem;
   }
 </style>

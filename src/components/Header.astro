@@ -19,6 +19,16 @@ import LangButton from "../components/LangButton.astro";
       <img src="src/img/logos/logo_hvid@3x.png" alt="Royal Escapes logo" />
     </div>
 
+    <div id="burger-c" class="burgermenu-container minnav">
+      <img class="burgermenu" src="src/img/fotos/menu.svg" alt="" />
+      <div class="mobil-menu menu-v">
+        <ul>
+          <li><a href="/index.html">Forside</a></li>
+          <li><a href="/contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 
     <div class="minnav">
       <ul>
         <li>
@@ -28,11 +38,37 @@ import LangButton from "../components/LangButton.astro";
           <a href="/contact.html">Kontakt</a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </nav>
 </header>
 
 <style>
+  .burgermenu-container {
+    display: block;
+  }
+
+  .burgermenu {
+    margin-top: 20px;
+    width: 37px;
+  }
+
+  .mobil-menu {
+    display: none;
+  }
+
+  .menu-v {
+    display: block;
+  }
+
+  .mobil-menu li {
+    transition: none;
+  }
+
+  .mobil-menu a {
+    text-decoration: none;
+    color: #fefefe;
+    gap: 0.2rem;
+  }
   header {
     padding: 0.5rem;
   }
@@ -61,6 +97,8 @@ import LangButton from "../components/LangButton.astro";
   .minnav ul {
     gap: 10px;
     list-style: none;
+    display: flex;
+    flex-direction: column;
   }
 
   .minnav a {
@@ -137,3 +175,11 @@ import LangButton from "../components/LangButton.astro";
     }
   }
 </style>
+
+<script>
+  document.querySelector("#burger-c").addEventListener("click", burgemenu);
+
+  function burgemenu() {
+    document.querySelector(".mobil-menu").classList.toggle("menu-v");
+  }
+</script>

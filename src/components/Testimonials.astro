@@ -1,4 +1,4 @@
----
+<!-- ---
 const url = "https://inoovrqyocblpfjinodr.supabase.co/rest/v1/Testimonials";
 const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlub292cnF5b2NibHBmamlub2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5Nzg0NzMsImV4cCI6MTk5NzU1NDQ3M30.8uiWz0Xo5WmwKbR6oLD1hSTTd-3PII1pFZlaZ9NEza4";
 const data = await fetch(url, {
@@ -12,12 +12,10 @@ import Testimonial from "./Testimonial.astro";
 ---
 
 <section>
-  <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam natus porro in molestiae maxime libero commodi quo animi iure optio magni quam fugiat harum facere enim, nobis provident ex excepturi.</p> -->
   <div class="arrow">
-    <h2>Det siger vores gæster</h2>
+    <h2> Det siger vores gæster</h2>
     <img src="/img/logos/pil-2@2x.png" alt="Royal Escapes logo" />
     <img class="ratings" src="/img/fotos/ratings@4x.png" alt="Royal Escapes logo" />
-    <!-- <div class="container"></div> -->
     <div class="testimonial">
       {
         data.map((testimonial) => {
@@ -75,4 +73,4 @@ import Testimonial from "./Testimonial.astro";
   .container p {
     padding: 2rem;
   }
-</style>
+</style> -->

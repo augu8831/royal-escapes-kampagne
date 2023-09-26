@@ -1,14 +1,14 @@
 ---
-const url = "https://inoovrqyocblpfjinodr.supabase.co/rest/v1/Testimonials";
-const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlub292cnF5b2NibHBmamlub2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5Nzg0NzMsImV4cCI6MTk5NzU1NDQ3M30.8uiWz0Xo5WmwKbR6oLD1hSTTd-3PII1pFZlaZ9NEza4";
-const data = await fetch(url, {
-  method: "GET",
-  headers: {
-    apikey: api,
-  },
-}).then((res) => res.json());
-console.log(data);
-import Testimonial from "./Testimonial.astro";
+// const url = "https://inoovrqyocblpfjinodr.supabase.co/rest/v1/Testimonials";
+// const api = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imlub292cnF5b2NibHBmamlub2RyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODE5Nzg0NzMsImV4cCI6MTk5NzU1NDQ3M30.8uiWz0Xo5WmwKbR6oLD1hSTTd-3PII1pFZlaZ9NEza4";
+// const data = await fetch(url, {
+//   method: "GET",
+//   headers: {
+//     apikey: api,
+//   },
+// }).then((res) => res.json());
+// console.log(data);
+// import Testimonial from "./Testimonial.astro";
 ---
 
 <section>
@@ -19,11 +19,12 @@ import Testimonial from "./Testimonial.astro";
     <img class="ratings" src="public/img/fotos/ratings@4x.png" alt="Royal Escapes logo" />
     <!-- <div class="container"></div> -->
     <div class="testimonial">
-      {
+      <!-- {
         data.map((testimonial) => {
           return <Testimonial data={testimonial} />;
         })
-      }
+      } -->
+      <img src="public/img/fotos/test1.webp" alt="Royal Escapes logo" />
     </div>
   </div>
 </section>
@@ -33,6 +34,7 @@ import Testimonial from "./Testimonial.astro";
   section {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 2rem;
   }
 
@@ -44,10 +46,11 @@ import Testimonial from "./Testimonial.astro";
     height: auto;
   }
 
-  .testimonial {
-    position: absolute;
-    top: 166.5rem;
-    width: 1000px;
+  .testimonial img {
+    position: relative;
+    top: -480px;
+    left: 10px;
+    width: 950px;
     height: 289px:
   } 
 
